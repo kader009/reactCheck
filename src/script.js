@@ -54,4 +54,14 @@ function fibonacci(n) {
 
 // console.log(fibonacci(9));
 
+function isPalindrome(str) {
+  let rev = str.split('').reverse().join('');
+  return str === rev;
+}
 
+// console.log(isPalindrome('racecar'));
+
+const arrIn = [2, 3, 3, 4, 5, 6, 7, 7, 8];
+
+const removes = [...new Set(arrIn)]
+console.log(removes);
