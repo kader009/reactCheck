@@ -34,4 +34,12 @@ function isEvenOrOdd(n) {
   return n % 2 === 0 ? 'even' : 'odd';
 }
 
-console.log(isEvenOrOdd(5));
+// console.log(isEvenOrOdd(5));
+
+// reverse string
+
+function reverseString(str) {
+  return str.split('').reverse().join(' ')
+}
+
+console.log(reverseString('kader'));
