@@ -25,11 +25,13 @@ function arrayRotation(arr, arrrotation) {
 
 // console.log(arrayRotation([1, 2, 3, 4, 5], 2));
 
-
 // even or odd
 
-function isEvenOrOdd(n){
-  return n % 2 === 0 ? console.log('even') : console.log('odd');
+function isEvenOrOdd(n) {
+  if (n === undefined) {
+    return 'Please provide number';
+  }
+  return n % 2 === 0 ? 'even' : 'odd';
 }
 
-console.log(isEvenOrOdd());
+console.log(isEvenOrOdd(5));
