@@ -12,7 +12,7 @@ function isPrime(n) {
   return true;
 }
 
-console.log(isPrime(19));
+// console.log(isPrime(19));
 
 // array rotation
 
@@ -23,4 +23,13 @@ function arrayRotation(arr, arrrotation) {
   return arr;
 }
 
-console.log(arrayRotation([1, 2, 3, 4, 5], 2));
+// console.log(arrayRotation([1, 2, 3, 4, 5], 2));
+
+
+// even or odd
+
+function isEvenOrOdd(n){
+  return n % 2 === 0 ? console.log('even') : console.log('odd');
+}
+
+console.log(isEvenOrOdd());
