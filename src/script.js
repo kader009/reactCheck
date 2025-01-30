@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // prime number check
 
 function isPrime(n) {
@@ -39,7 +40,18 @@ function isEvenOrOdd(n) {
 // reverse string
 
 function reverseString(str) {
-  return str.split('').reverse().join(' ')
+  return str.split('').reverse().join(' ');
 }
 
-console.log(reverseString('kader'));
+// console.log(reverseString('kader'));
+
+function fibonacci(n) {
+  if (n <= 0) return 0;
+  if (n === 1) return 1;
+
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// console.log(fibonacci(9));
+
+
