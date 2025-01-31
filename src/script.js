@@ -64,4 +64,16 @@ function isPalindrome(str) {
 const arrIn = [2, 3, 3, 4, 5, 6, 7, 7, 8];
 
 const removes = [...new Set(arrIn)]
-console.log(removes);
+// console.log(removes.at(-1));
+// console.log(removes);
+
+
+// another way fibonacci
+
+const fib = steps =>{
+  if(steps < 2) return steps;
+
+  return fib(steps - 2) + fib(steps - 1)
+}
+
+console.log(fib(17));
