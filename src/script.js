@@ -4,7 +4,7 @@
 function isPrime(n) {
   if (n < 2) return false;
 
-  for (let i = 2; i <= Math.sqrt(n); i++) {
+  for (let i = 2; i <= Math.sqrt(n); i++) { 
     if (n % i === 0) {
       return false;
     }
@@ -68,7 +68,7 @@ const removes = [...new Set(arrIn)]
 // console.log(removes);
 
 
-// another way fibonacci
+//todo: another way fibonacci
 
 const fib = steps =>{
   if(steps < 2) return steps;
@@ -76,4 +76,14 @@ const fib = steps =>{
   return fib(steps - 2) + fib(steps - 1)
 }
 
-console.log(fib(17));
+// console.log(fib(17));
+
+// vowel count
+
+function Vowel(str){
+  const arr = [...str];
+  return arr.filter((ele) => ['a', 'e', 'i', 'o', 'u'].includes(ele))
+}
+
+console.log(Vowel('kader'));
+
