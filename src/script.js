@@ -4,7 +4,7 @@
 function isPrime(n) {
   if (n < 2) return false;
 
-  for (let i = 2; i <= Math.sqrt(n); i++) { 
+  for (let i = 2; i <= Math.sqrt(n); i++) {
     if (n % i === 0) {
       return false;
     }
@@ -63,27 +63,34 @@ function isPalindrome(str) {
 
 const arrIn = [2, 3, 3, 4, 5, 6, 7, 7, 8];
 
-const removes = [...new Set(arrIn)]
+const removes = [...new Set(arrIn)];
 // console.log(removes.at(-1));
 // console.log(removes);
 
-
 //todo: another way fibonacci
 
-const fib = steps =>{
-  if(steps < 2) return steps;
+const fib = (steps) => {
+  if (steps < 2) return steps;
 
-  return fib(steps - 2) + fib(steps - 1)
-}
+  return fib(steps - 2) + fib(steps - 1);
+};
 
 // console.log(fib(17));
 
 // vowel count
 
-function Vowel(str){
+function Vowel(str) {
   const arr = [...str];
-  return arr.filter((ele) => ['a', 'e', 'i', 'o', 'u'].includes(ele))
+  return arr.filter((ele) => ['a', 'e', 'i', 'o', 'u'].includes(ele)).length;
 }
 
-console.log(Vowel('kader'));
+// console.log(Vowel('kader'));
 
+
+// returning string :-
+
+const greet = name =>{
+  return `Hello, ${name} how are you doing today!`;
+}
+
+console.log(greet('kader'));
