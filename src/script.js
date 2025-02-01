@@ -86,11 +86,25 @@ function Vowel(str) {
 
 // console.log(Vowel('kader'));
 
-
 // returning string :-
 
-const greet = name =>{
+const greet = (name) => {
   return `Hello, ${name} how are you doing today!`;
-}
+};
 
-console.log(greet('kader'));
+// console.log(greet('kader'));
+
+// year to century
+
+const century = (year) => {
+  return Math.ceil(year / 100);
+};
+
+// console.log(century(2020));
+
+// keep hydrated
+const litres = (time) => {
+  return Math.floor(time * 0.5);
+};
+
+console.log(litres(12));
