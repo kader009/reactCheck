@@ -107,4 +107,30 @@ const litres = (time) => {
   return Math.floor(time * 0.5);
 };
 
-console.log(litres(12));
+// console.log(litres(12));
+
+// divisible
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0;
+}
+
+// console.log(isDivisible(12, 4, 6));
+
+// who likes this
+
+function likes(names) {
+  let lenghts = names.length;
+  let output;
+
+  if (lenghts === 0) {
+    output = 'one one like this';
+  } else if (lenghts === 1) {
+    output = `${names} like this !`;
+  } else if (lenghts === 2) {
+    output = `${names[0]} and ${names[1]} like this !`;
+  }
+
+  return output;
+}
+
+console.log(likes(['abdul', 'kader']));
