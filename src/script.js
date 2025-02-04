@@ -133,4 +133,14 @@ function likes(names) {
   return output;
 }
 
-console.log(likes(['abdul', 'kader']));
+// console.log(likes(['abdul', 'kader']));
+
+// highest to lowest
+
+function highAndlow(num) {
+  const arr = num;
+
+  return `${Math.max(...arr)} ${Math.min(...arr)}`;
+}
+
+console.log(typeof highAndlow([1, 3, 4, 5]));
