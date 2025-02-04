@@ -6,23 +6,46 @@ const getUsersList = gql`
       id
       name
       age
-      idMerried
+      isMerried
+    }
+  }
+`;
+
+const getUserById = gql`
+  query getUsers($id: ID!) {
+    getUserById(id: $id) {
+      id
+      name
+      age
+      isMerried
     }
   }
 `;
 
 function App() {
-  const { data, error, loading } = useQuery(getUsersList);
+  const { data : UserData, error: UserError, loading: UserLoading } = useQuery(getUsersList);
+  const { data, error, loading } = useQuery(getUserById,{
+    variables:{id:'2'}
+  });
 
   if (loading) return <p>Data loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div>
-      <h1>Users</h1>
-      {data?.getUsers?.map((user) => (
-        <div key={user.id}>
-          <span>{user.name}</span>
+      <h1 className="font-bold text-blue-600 mb-4">Users list</h1>
+
+      <br />
+      <div>
+      <p>{data?.getUserById?.id}</p>
+      <p>{data?.getUserById?.name}</p>
+      </div>
+      <br />
+      {UserData?.getUsers?.map((user) => (
+        <div key={user.id} className="flex flex-col gap-2">
+          <span>Name: {user.name}</span>
+          <span>Age: {user.age}</span>
+          <span>Merried: {user.isMerried ? 'Yes' : 'No'}</span>
         </div>
       ))}
     </div>

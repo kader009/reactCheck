@@ -143,4 +143,20 @@ function highAndlow(num) {
   return `${Math.max(...arr)} ${Math.min(...arr)}`;
 }
 
-console.log(typeof highAndlow([1, 3, 4, 5]));
+// console.log(highAndlow([1, 3, 4, 5]));
+
+// find largest number
+
+function LargeNumber(arr) {
+  let large = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > large) {
+      large = arr[i];
+    }
+  }
+
+  return large;
+}
+
+console.log(LargeNumber([34, 89, 100, 50]));
