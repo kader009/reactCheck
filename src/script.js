@@ -158,5 +158,12 @@ function LargeNumber(arr) {
 
   return large;
 }
+// console.log(LargeNumber([78, 123, 50, 58]));
 
-console.log(LargeNumber([34, 89, 100, 50]));
+// sum of array
+
+function Sumof(arr){
+  return arr.reduce((acc, sum) => acc + sum, 0)
+}
+
+console.log(Sumof([23, 45, 89]));
