@@ -166,4 +166,12 @@ function Sumof(arr){
   return arr.reduce((acc, sum) => acc + sum, 0)
 }
 
-console.log(Sumof([23, 45, 89]));
+// console.log(Sumof([23, 45, 89]));
+
+// string occurence
+
+function Charat(str, char){
+  return str.split(char).length - 1;
+}
+
+console.log(Charat('kader', 'i'));
