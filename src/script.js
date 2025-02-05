@@ -191,4 +191,18 @@ function MissingNumber(arr) {
   return expected - actual;
 }
 
-console.log(MissingNumber([1, 3, 4, 5]));
+// console.log(MissingNumber([1, 3, 4, 5]));
+
+// desending number
+
+function descendingOrder(num) {
+  return parseInt(
+    num
+      .toString()
+      .split('')
+      .sort((a, b) => b - a)
+      .join('')
+  );
+}
+
+console.log(descendingOrder(12345));
