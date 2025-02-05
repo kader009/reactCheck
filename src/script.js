@@ -162,16 +162,33 @@ function LargeNumber(arr) {
 
 // sum of array
 
-function Sumof(arr){
-  return arr.reduce((acc, sum) => acc + sum, 0)
+function Sumof(arr) {
+  return arr.reduce((acc, sum) => acc + sum, 0);
 }
 
 // console.log(Sumof([23, 45, 89]));
 
 // string occurence
 
-function Charat(str, char){
+function Charat(str, char) {
   return str.split(char).length - 1;
 }
+// console.log(Charat('kader', 'i'));
 
-console.log(Charat('kader', 'i'));
+// find a missing number from an array
+
+function MissingNumber(arr) {
+  // const misnum = arr.length + 1;
+  // const min = Math.min(...arr);
+  // const min = 1;
+
+  // math max create
+  const max = Math.max(...arr);
+
+  const expected = (max * (max + 1)) / 2;
+
+  const actual = arr.reduce((sum, num) => sum + num, 0);
+  return expected - actual;
+}
+
+console.log(MissingNumber([1, 3, 4, 5]));
