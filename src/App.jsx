@@ -23,9 +23,13 @@ const getUserById = gql`
 `;
 
 function App() {
-  const { data : UserData, error: UserError, loading: UserLoading } = useQuery(getUsersList);
-  const { data, error, loading } = useQuery(getUserById,{
-    variables:{id:'2'}
+  const {
+    data: UserData,
+    error: UserError,
+    loading: UserLoading,
+  } = useQuery(getUsersList);
+  const { data, error, loading } = useQuery(getUserById, {
+    variables: { id: '2' },
   });
 
   if (loading) return <p>Data loading...</p>;
@@ -37,8 +41,8 @@ function App() {
 
       <br />
       <div>
-      <p>{data?.getUserById?.id}</p>
-      <p>{data?.getUserById?.name}</p>
+        <p>{data?.getUserById?.id}</p>
+        <p>{data?.getUserById?.name}</p>
       </div>
       <br />
       {UserData?.getUsers?.map((user) => (
