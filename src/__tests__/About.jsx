@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import About from './About';
 import { expect, it } from 'vitest';
+import About from '../pages/About';
 
 it('renders About text', () => {
   render(<About />);
