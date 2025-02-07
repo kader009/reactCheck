@@ -205,4 +205,20 @@ function descendingOrder(num) {
   );
 }
 
-console.log(descendingOrder(12345));
+// console.log(descendingOrder(12345));
+
+// fizz and buzz
+
+function fizzbuzz() {
+  let output;
+
+  for (let num = 0; num <= 100; num++) {
+    output = '';
+
+    if (num % 3 === 0) output = 'Fizz';
+    if (num % 5 === 0) output = 'Buzz';
+    console.log(output || num);
+  }
+}
+
+fizzbuzz();
