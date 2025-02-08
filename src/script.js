@@ -214,11 +214,22 @@ function fizzbuzz() {
 
   for (let num = 0; num <= 100; num++) {
     output = '';
-
     if (num % 3 === 0) output = 'Fizz';
     if (num % 5 === 0) output = 'Buzz';
     console.log(output || num);
   }
 }
 
-fizzbuzz();
+// fizzbuzz();
+
+// truncate a number
+
+function truncateString(str, charCount) {
+  if (str.length > charCount) {
+    return str.substr(0, charCount - 3) + '...';
+  } else {
+    return str;
+  }
+}
+
+console.log(truncateString('kadermolla', 7));
