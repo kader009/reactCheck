@@ -232,4 +232,12 @@ function truncateString(str, charCount) {
   }
 }
 
-console.log(truncateString('kadermolla', 7));
+// console.log(truncateString('kadermolla', 7));
+
+// remove vowel from the text
+
+function removeVowel(str){
+  return str.replace(/[aeiou]/gi, '')
+}
+
+console.log(removeVowel('I love javascript'));
