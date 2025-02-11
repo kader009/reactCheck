@@ -2,7 +2,7 @@ const InputField = () => {
   return (
     <div>
       <h3>Sign up</h3>
-      <label>
+      <label htmlFor="login">
         Login
       </label>
         <input type="text" id="login" placeholder="user login"/>

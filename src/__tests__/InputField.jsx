@@ -9,7 +9,7 @@ describe('getbyRole', () => {
     const element = screen.getByRole('textbox');
     const element2 = screen.getByPlaceholderText('user login');
     const element3 = screen.getByPlaceholderText('password');
-    const element4 = screen.getByLabelText('login');
+    const element4 = screen.getByLabelText('Login');
 
     expect(element).toBeInTheDocument();
     expect(element2).toBeInTheDocument();
