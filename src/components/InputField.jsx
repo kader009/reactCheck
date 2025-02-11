@@ -4,11 +4,11 @@ const InputField = () => {
       <h3>Sign up</h3>
       <label>
         Login
-        <input type="text" id="login"/>
       </label>
+        <input type="text" id="login" placeholder="user login"/>
       <label>
         Password
-        <input type="password" id="password"/>
+        <input type="password" id="password" placeholder="password"/>
       </label>
       <br />
       <button>Submit</button>
