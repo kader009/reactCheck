@@ -2,6 +2,7 @@ const InputField = () => {
   return (
     <div>
       <h3>Sign up</h3>
+      <div title="mixer"></div>
       <img src="https://www.google.com" alt="google" />
       <label htmlFor="login">
         Login
