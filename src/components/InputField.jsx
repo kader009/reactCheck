@@ -6,9 +6,9 @@ const InputField = () => {
   useEffect(() => {
     setTimeout(() => {
       SetshowMessage(true);
-    }, 500);
+    }, 2000);
   }, []);
-  
+
   return (
     <div>
       <h3>Sign up</h3>
@@ -21,7 +21,7 @@ const InputField = () => {
         <input type="password" id="password" placeholder="password" />
       </label>
       <br />
-      {showMessage && <div>this is message</div>}
+      {showMessage && <div data-testid='message'>this is message</div>}
       <br />
       <button>Submit</button>
     </div>
