@@ -1,6 +1,7 @@
 import {render, screen} from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import UserEvent from '../components/UserEvent'
+import user from '@testing-library/user-event'
 
 describe('userEvent', () =>{
   it('Renders a counter with initial value of 0', () =>{
@@ -11,7 +12,11 @@ describe('userEvent', () =>{
     })
 
     expect(heading).toBeInTheDocument()
+  })
 
+  it('should increase count upon on page load', async() =>{
+    user.setup()
+    render(<UserEvent/>)
   })
 
 })
