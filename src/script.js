@@ -249,4 +249,18 @@ function highAndLow(numbers) {
   return `${Math.max(...arr)} ${Math.min(...arr)}`;
 }
 
-console.log(highAndLow('1 2 4 5'));
+// console.log(highAndLow('1 2 4 5'));
+
+// descending number
+
+function Descending(number) {
+  return parseInt(
+    number
+      .toString()
+      .split('')
+      .sort((a, b) => b - a)
+      .join('')
+  );
+}
+
+// console.log(Descending(123456789));
