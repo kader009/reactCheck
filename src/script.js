@@ -4,7 +4,7 @@
 function isPrime(n) {
   if (n < 2) return false;
 
-  for (let i = 2; i <= Math.sqrt(n); i++) { 
+  for (let i = 2; i <= Math.sqrt(n); i++) {
     if (n % i === 0) {
       return false;
     }
@@ -236,11 +236,17 @@ function truncateString(str, charCount) {
 
 // remove vowel from the text
 
-function removeVowel(str){
-  return str.replace(/[aeiou]/gi, '')
+function removeVowel(str) {
+  return str.replace(/[aeiou]/gi, '');
 }
 
 // console.log(removeVowel('I love javascript'));
 
-// snake case to camelcase
+// highest and lowest number
 
+function highAndLow(numbers) {
+  const arr = numbers.split(' ');
+  return `${Math.max(...arr)} ${Math.min(...arr)}`;
+}
+
+console.log(highAndLow('1 2 4 5'));
