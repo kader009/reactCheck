@@ -285,4 +285,21 @@ function greets(name) {
   return console.log(`Hello, ${name} how are you doing today!`);
 }
 
-greets('kader')
+// greets('kader')
+
+// move zero to the end
+
+function moveZeroes(nums) {
+  let j = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      [nums[i], nums[j]] = [nums[j], nums[i]];
+      j++;
+    }
+  }
+
+  return nums;
+}
+
+// console.log(moveZeroes([0, 1, 0, 3, 12]));
