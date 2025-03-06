@@ -278,3 +278,11 @@ function isPrimes(num) {
 }
 
 // console.log(isPrimes(19));
+
+// returning string
+
+function greets(name) {
+  return console.log(`Hello, ${name} how are you doing today!`);
+}
+
+greets('kader')
