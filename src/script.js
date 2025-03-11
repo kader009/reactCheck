@@ -303,3 +303,12 @@ function moveZeroes(nums) {
 }
 
 // console.log(moveZeroes([0, 1, 0, 3, 12]));
+
+// duplicate number
+
+function Duplicate(arr){
+  return [...new Set(arr)]
+}
+
+// console.log(Duplicate([1,1,2,3,2,3]));
+
