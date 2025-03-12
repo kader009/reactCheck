@@ -314,8 +314,16 @@ function Duplicate(arr) {
 
 // factorial
 
-function factorials(n){
-  return n === 0 ? 1 : n * factorials(n - 1)
+function factorials(n) {
+  return n === 0 ? 1 : n * factorials(n - 1);
 }
 
-console.log(factorials(6));
+// console.log(factorials(6));
+
+// longest sentence
+
+function longWord(sentence){
+  return sentence.split(" ").reduce((longest, word) => word.length > longest.length ? word : longest, '')
+}
+
+console.log(longWord('ami tomake'));
