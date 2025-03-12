@@ -306,9 +306,16 @@ function moveZeroes(nums) {
 
 // duplicate number
 
-function Duplicate(arr){
-  return [...new Set(arr)]
+function Duplicate(arr) {
+  return [...new Set(arr)];
 }
 
 // console.log(Duplicate([1,1,2,3,2,3]));
 
+// factorial
+
+function factorials(n){
+  return n === 0 ? 1 : n * factorials(n - 1)
+}
+
+console.log(factorials(6));
