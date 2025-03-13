@@ -322,8 +322,21 @@ function factorials(n) {
 
 // longest sentence
 
-function longWord(sentence){
-  return sentence.split(" ").reduce((longest, word) => word.length > longest.length ? word : longest, '')
+function longWord(sentence) {
+  return sentence
+    .split(' ')
+    .reduce(
+      (longest, word) => (word.length > longest.length ? word : longest),
+      ''
+    );
 }
 
-console.log(longWord('ami tomake'));
+// console.log(longWord('i am good man'));
+
+// anagram word
+
+function Anagram(str1, str2) {
+  return str1.split('').sort().join('') === str2.split('').sort().join('');
+}
+
+console.log(Anagram('listen', 'silent'));
