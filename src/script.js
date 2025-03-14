@@ -339,4 +339,12 @@ function Anagram(str1, str2) {
   return str1.split('').sort().join('') === str2.split('').sort().join('');
 }
 
-console.log(Anagram('listen', 'silent'));
+// console.log(Anagram('listen', 'silent'));
+
+// century from year
+
+function centurys(year){
+  return Math.ceil(year / 100)
+}
+
+console.log(centurys(1709));
