@@ -347,4 +347,12 @@ function centurys(year){
   return Math.ceil(year / 100)
 }
 
-console.log(centurys(1709));
+// console.log(centurys(1709));
+
+// vowel count
+
+function countVowel(str){
+  return str.match(/[aeiou]/gi).length
+}
+
+console.log(countVowel('this also me here'));
