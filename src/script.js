@@ -359,13 +359,34 @@ function countVowel(str) {
 
 // javascript asynchronous bevaior
 
-// todo: a. Callbacks
+// a. Callbacks
 function fetchData(callback) {
   setTimeout(() => {
-    callback('Data fetched!');
+    console.log('Data Received');
+    callback();
   }, 2000);
 }
 
-fetchData((data) => {
-  console.log(data);
-});
+function processData() {
+  console.log('data processing');
+}
+
+fetchData(processData);
+
+// b. Promises
+
+function fetchDataPromises() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data received!');
+    }, 2000);
+  });
+}
+
+fetchDataPromises()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
