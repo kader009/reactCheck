@@ -357,6 +357,9 @@ function countVowel(str) {
 
 // console.log(countVowel('this also me here'));
 
+// javascript asynchronous bevaior
+
+// todo: a. Callbacks
 function fetchData(callback) {
   setTimeout(() => {
     callback('Data fetched!');
