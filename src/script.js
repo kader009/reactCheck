@@ -411,15 +411,26 @@ const person1 = new Person('Rasel', 30);
 // animal class create
 
 class Animal {
+  #secret = 'my secret';
   constructor(name, sound) {
-    this.name = name;
-    this.sound = sound;
+    this._name = name;
+    this._sound = sound;
   }
 
   speak() {
     return `the ${this.name} says ${this.sound}`;
   }
+
+  getSecret() {
+    return this.#secret;
+  }
 }
 
 const animal = new Animal('dog', 'woof');
 console.log(animal.speak());
+console.log(animal.getSecret());
+
+const arr = [1, 2, 3, 4, 5, 6];
+const shuffle = (arr) => arr.sort(() => Math.random() - 0.5);
+console.log(shuffle(arr));
+
