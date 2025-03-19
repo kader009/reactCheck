@@ -406,4 +406,20 @@ class Person {
 
 const person1 = new Person('Rasel', 30);
 
-console.log(person1.introduce());
+// console.log(person1.introduce());
+
+// animal class create
+
+class Animal {
+  constructor(name, sound) {
+    this.name = name;
+    this.sound = sound;
+  }
+
+  speak() {
+    return `the ${this.name} says ${this.sound}`;
+  }
+}
+
+const animal = new Animal('dog', 'woof');
+console.log(animal.speak());
