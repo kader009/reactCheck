@@ -362,13 +362,13 @@ function countVowel(str) {
 // a. Callbacks
 function fetchData(callback) {
   setTimeout(() => {
-    console.log('Data Received');
+    // console.log('Data Received');
     callback();
   }, 2000);
 }
 
 function processData() {
-  console.log('data processing');
+  // console.log('data processing');
 }
 
 fetchData(processData);
@@ -385,8 +385,23 @@ function fetchDataPromises() {
 
 fetchDataPromises()
   .then((data) => {
-    console.log(data);
+    // console.log(data);
   })
   .catch((error) => {
     console.log(error);
   });
+
+// create person using function and introduce
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Person.prototype.introduce = function () {
+  return `Hi, I am ${this.name} and I am ${this.age} years old`;
+};
+
+const person1 = new Person('Rasel', 30)
+
+console.log(person1.introduce());
