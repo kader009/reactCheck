@@ -432,5 +432,4 @@ console.log(animal.getSecret());
 
 const arr = [1, 2, 3, 4, 5, 6];
 const shuffle = (arr) => arr.sort(() => Math.random() - 0.5);
-console.log(shuffle(arr));
-
+// console.log(shuffle(arr)); // this function modify
