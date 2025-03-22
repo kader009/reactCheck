@@ -418,7 +418,7 @@ class Animal {
   }
 
   speak() {
-    return `the ${this.name} says ${this.sound}`;
+    return `the ${this._name} says ${this._sound}`;
   }
 
   getSecret() {
@@ -427,9 +427,17 @@ class Animal {
 }
 
 const animal = new Animal('dog', 'woof');
-console.log(animal.speak());
-console.log(animal.getSecret());
+// console.log(animal.speak());
+// console.log(animal.getSecret());
 
 const arr = [1, 2, 3, 4, 5, 6];
 const shuffle = (arr) => arr.sort(() => Math.random() - 0.5);
 // console.log(shuffle(arr)); // this function modify
+
+// Encapsulation
+
+// todo: deposit, withdraw, getbalance
+
+class BackBalance{
+  constructor()
+}
