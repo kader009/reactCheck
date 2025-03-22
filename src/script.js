@@ -445,21 +445,29 @@ class BankBalance {
     this.#balance = balance;
   }
 
-  deposit(amount) {
+  deposit(amount) { // for deposit amount of money function
     this.#balance += amount;
-    console.log(`you depostion ${amount} and balace is ${this.#balance}`);
+    console.log(`you depostion ${amount} and balance is ${this.#balance}!`);
   }
 
-  withdraw(amount) {
+  withdraw(amount) { // withdraw money function
     if (amount > this.#balance) {
-      console.log(`less amount of money you have`);
+      console.log(`less amount of money you have in your account number!`);
       return;
     }
     this.#balance -= amount;
-    console.log(`you withdrwa ${amount} and main balace is ${this.#balance}`);
+    console.log(`you withdraw ${amount} and main balace is ${this.#balance}!`);
   }
 }
 
 const bankbalance = new BankBalance('2839595', 100);
-bankbalance.deposit(400);
-bankbalance.withdraw(200);
+// bankbalance.deposit(400);
+// bankbalance.withdraw(600);
+
+// abstraction
+
+//  todo: create car for understand the way.
+
+class Car{
+  
+}
