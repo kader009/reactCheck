@@ -438,6 +438,24 @@ const shuffle = (arr) => arr.sort(() => Math.random() - 0.5);
 
 // todo: deposit, withdraw, getbalance
 
-class BackBalance{
-  constructor()
+class BackBalance {
+  #balance;
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber;
+    this.#balance = balance;
+  }
+
+  deposit(amount) {
+    this.#balance += amount;
+    console.log(`you depostion ${amount} and balace is ${this.#balance}`);
+  }
+
+  withdraw(amount) {
+    if (amount > this.#balance) {
+      console.log(`less amount of money you have`);
+      return;
+    }
+    this.#balance -= amount;
+    console.log(`you withdrwa ${amount} and main balace is ${this.#balance}`);
+  }
 }
