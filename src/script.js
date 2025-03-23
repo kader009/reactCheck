@@ -492,5 +492,17 @@ const car = new Car('Mercedes');
 // inheritance
 
 class Bus{
-  constructor(driver, wheel, seats){}
+  constructor(driver, wheel, seats){
+    this.driver = driver;
+    this.wheel = wheel;
+    this.seats = seats;
+  }
+}
+
+class Truck{
+  constructor(driver, wheel, capacity){
+    this.driver = driver;
+    this.wheel = wheel;
+    this.capacity = capacity;
+  }
 }
