@@ -521,4 +521,19 @@ class Animals {
   constructor(name) {
     this.#name = name;
   }
+
+  get name() {
+    return this.#name;
+  }
+
+  set name(newName) {
+    if (newName > 3) {
+      console.log(`at least 3 character needed for name!`);
+    }
+    this.#name = newName;
+  }
+
+  speak(){
+    throw new Error('name already in the text')
+  }
 }
