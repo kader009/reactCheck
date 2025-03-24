@@ -437,7 +437,6 @@ const shuffle = (arr) => arr.sort(() => Math.random() - 0.5);
 // Encapsulation
 
 // todo: deposit, withdraw, getbalance
-
 class BankBalance {
   #balance;
   constructor(accountNumber, balance) {
@@ -509,5 +508,17 @@ class Truck extends Vehicle {
   constructor(driver, wheel, capacity) {
     super(driver, wheel);
     this.capacity = capacity;
+  }
+}
+
+const bus = new Bus('kader', 8, 50);
+const truck = new Truck('molla', 10, 500);
+
+// ? abstraction and encapsulation
+
+class Animals {
+  #name;
+  constructor(name) {
+    this.#name = name;
   }
 }
