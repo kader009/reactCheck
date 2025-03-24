@@ -527,13 +527,31 @@ class Animals {
   }
 
   set name(newName) {
-    if (newName > 3) {
-      console.log(`at least 3 character needed for name!`);
+    if (newName.length > 2) {
+      this.#name = newName;
+    } else {
+      console.log(`text must be 3 charecter`);
     }
-    this.#name = newName;
   }
 
-  speak(){
-    throw new Error('name already in the text')
+  speak() {
+    throw new Error('speak methods call in the subclass');
   }
 }
+
+class Dog extends Animals {
+  speak() {
+    console.log(`${this.name} : Buddy says woof woof!`);
+  }
+}
+
+class Cat extends Animals {
+  speak() {
+    console.log(`${this.name} : says meow meow!`);
+  }
+}
+
+const dogs = new Dog('dog');
+dogs.speak()
+const cats = new Cat('cattty');
+cats.speak()
