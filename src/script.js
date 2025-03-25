@@ -568,4 +568,15 @@ class BMWCAR {
   getCarInfo() {
     return `${this.#brand} ${this.#model} ${this.#year}`;
   }
+
+  static compareCar(car1, car2){
+    return car1.#year > car2.year ? `${car1.getCarInfo()} is newer` : `${car2.getCarInfo()} is newer` 
+  }
+}
+
+class Electrocar extends BMWCAR{
+  #batteryCapacity
+  constructor(brand, model, year, batteryCapacity){
+    super(brand, model, year)
+  }
 }
