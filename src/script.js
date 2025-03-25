@@ -554,10 +554,18 @@ class Cat extends Animals {
 const dogs = new Dog('dog');
 const cats = new Cat('cattty');
 
+class BMWCAR {
+  #brand;
+  #model;
+  #year;
 
-class BMWCAR{
-  #brand
-  #model
-  #year
-  constructor(){}
+  constructor(brand, model, year) {
+    this.#brand = brand;
+    this.#model = model;
+    this.#year = year;
+  }
+
+  getCarInfo() {
+    return `${this.#brand} ${this.#model} ${this.#year}`;
+  }
 }
