@@ -552,6 +552,12 @@ class Cat extends Animals {
 }
 
 const dogs = new Dog('dog');
-dogs.speak()
 const cats = new Cat('cattty');
-cats.speak()
+
+
+class BMWCAR{
+  #brand
+  #model
+  #year
+  constructor(){}
+}
